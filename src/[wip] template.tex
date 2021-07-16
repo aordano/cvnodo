@@ -1,0 +1,230 @@
+% -----------------------------------------------------------
+%
+%            Environmental Hub Resumé Template
+%
+%                  --------- - ---------
+%
+% For XeLaTeX
+%
+% Based on:
+%  Adrien Friggeri's work (adrien@friggeri.net)
+%  Sorry the template doesn't exist online as now :(
+%
+%
+% -----------------------------------------------------------
+
+% Template code as: 
+%    <<SOMETHING>>           String to replace
+%    <<+SOMETHING>>          String to multi-replace
+%    <<_m+SOMETHING>>        Insert an iterable module
+%    <<THING_m+SOMETHING>>   Insert iterable sub-module
+
+% TODO:Major | Create subtemplates to iterate on the corresponding fields
+% TODO:Major | Create a subtemplate with code specific to procedurally generate the kiviat diagram
+% TODO:Major | Put this in a damn git repo
+
+% TODO:Minor | Complete the templating (replace values with template code)
+% TODO:Minor | Add Environmental Hub branding
+% TODO:Minor | What do we do with the bibliography and shit?
+
+% TODO:Patch | Fix header text sizing
+
+% FIXME      | Complete to-dos lol
+
+\documentclass{structure}
+
+\bibliography{bibliography.bib}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	Skills
+%----------------------------------------------------------------------------------------
+
+\header{<<FIRSTNAME>>}{<<LASTNAME>>}{<<CURRENT-ROLE>>}
+
+\hfill\\[0.5cm]
+
+%----------------------------------------------------------------------------------------
+%	Skills
+%----------------------------------------------------------------------------------------
+
+\section{Habilidades} % * Skills 
+\begin{minipage}{0.7\textwidth}
+    \SetAxisLabels{<<AXIS1>>}{<<AXIS2>>}{<<AXIS3>>}{<<AXIS4>>}{<<AXIS5>>}{}
+    \KiviatDiagram{2.5}{6}{4}{7}{9}{0} % TODO Replace with template code
+\end{minipage}%
+\hfill{\color{RoyalPurple}\vline}\hfill%
+\begin{minipage}{0.25\textwidth}
+    \begin{flushleft}
+        \subsection{Contacto} % * Contact info
+        \href{tel:<<PHONE>>}{<<PHONE>}\linebreak
+        \href{mailto:<<EMAIL>>}{<<EMAIL>>}\linebreak
+        \href{<<+FULLSITE>>}{<<+SITE>>}\linebreak
+        \subsection{Lenguas}  % * Languages
+        <<+LANGUAGE>>\linebreak
+    \end{flushleft}
+    \,\vfill
+\end{minipage}%
+
+\hfill\\[0.5cm]
+
+%----------------------------------------------------------------------------------------
+%	Experience
+%----------------------------------------------------------------------------------------
+
+\section{Experiencia}
+
+\begin{entrylist}
+
+    %------------------------------------------------
+
+    % ? This should be an optative module included with an <<EXPERIENCE_m+ENTRY>> key
+
+    \entry
+    {2012--Now}
+    {LEHMAN BROTHERS}
+    {Los Angeles, California}
+    {\emph{1\textsuperscript{st} Year Analyst} \\
+        Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (ags, oils, precious and base metals), managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping. \\
+        Detailed achievements:
+        \begin{itemize}
+            \item Learned how to make amazing coffee
+            \item Finally determined the reason for \textsc{PC LOAD LETTER}:
+                  \begin{itemize}
+                      \item Paper jam
+                      \item Software issues:
+                            \begin{itemize}
+                                \item Word not sending the correct data to printer
+                                \item Windows trying to print in letter format
+                            \end{itemize}
+                      \item Coffee spilled inside printer
+                  \end{itemize}
+            \item Broke the office record for number of kitten pictures in cubicle
+            \item Learned how to make more amazing coffee on a new machine
+        \end{itemize}
+    }
+
+    %------------------------------------------------
+
+    \entry
+    {2010--2011}
+    {LEHMAN BROTHERS}
+    {London, United Kingdom}
+    {\emph{Summer Intern} \\
+        Received pre-placed offer from the Exotics Trading Desk as a result of very positive reviews. Rated "truly distinctive" for Analytical Skills and Teamwork.
+    }
+
+    %------------------------------------------------
+
+    \entry
+    {2008-2009}
+    {Buy More}
+    {Burbank, California}
+    {\emph{Computer Repair Specialist} \\
+        Worked in the Nerd Herd and helped to solve computer problems by asking customers to turn their computers off and on again.
+    }
+
+    %------------------------------------------------
+
+\end{entrylist}
+
+\hfill\\[0.5cm]
+
+%----------------------------------------------------------------------------------------
+%	Academia
+%----------------------------------------------------------------------------------------
+
+\section{Educación}
+
+\begin{entrylist}
+
+    %------------------------------------------------
+
+    % ? This should be an optative module included with an <<ACADEMIA_m+ENTRY>> key
+
+    \entry
+    {2011--2012}
+    {Masters {\normalfont of Commerce}}
+    {The University of California, Berkeley}
+    {\emph{Money Is The Root Of All Evil -- Or Is It?} \\ This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.}
+
+    %------------------------------------------------
+
+    \entry
+    {2007--2008}
+    {Bachelor {\normalfont of Business Studies}}
+    {The University of California, Berkeley}
+    {Specialization in Commerce}
+
+    %------------------------------------------------
+
+\end{entrylist}
+
+\hfill\\[0.5cm]
+
+%----------------------------------------------------------------------------------------
+%	Awards
+%----------------------------------------------------------------------------------------
+
+% ? This should be an optative module included with an <<_m+AWARDS>> key
+
+\section{Premios}
+
+\begin{entrylist}
+
+    %------------------------------------------------
+
+    \entry
+    {2011}
+    {Postgraduate Scholarship}
+    {School of Business, The University of California}
+    {Awarded to the top student in their final year of a Bachelors degree. Mastered the art of filing accurate TPS reports.}
+
+    %------------------------------------------------
+
+\end{entrylist}
+
+\hfill\\[0.5cm]
+
+%----------------------------------------------------------------------------------------
+%	Papers et al
+%----------------------------------------------------------------------------------------
+
+% ? | Fix this shit, is a mess
+
+% ? This should be an optative module included with an <<_m+PUBLICATIONS>> key
+
+\section{Publicaciones}
+
+\printbibsection{article}{article in peer-reviewed journal} % Print all articles from the bibliography
+
+\printbibsection{book}{books} % Print all books from the bibliography
+
+\begin{refsection} % This is a custom heading for those references marked as "inproceedings" but not containing "keyword=france"
+    \nocite{*}
+    \printbibliography[type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=bibheading]
+\end{refsection}
+
+\begin{refsection} % This is a custom heading for those references marked as "inproceedings" and containing "keyword=france"
+    \nocite{*}
+    \printbibliography[type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=bibheading]
+\end{refsection}
+
+\printbibsection{misc}{other publications} % Print all miscellaneous entries from the bibliography
+
+\hfill\\[0.5cm]
+
+%----------------------------------------------------------------------------------------
+%	About
+%----------------------------------------------------------------------------------------
+
+% ? This should be an optative module included with an <<_m+ABOUT-ME>> key
+
+\section{Acerca de mí}
+
+\textbf{professional:} data analysis, company profiling, risk analysis, economics, web design, web app creation, software design, marketing \textbf{personal:} piano, chess, cooking, dancing, running
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

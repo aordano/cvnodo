@@ -1,0 +1,72 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "PublicationsModule",
+    "description": "Optative module to be included in the CV template.\nThis one is about publications.\nIt is an array listing the entries to be generated in the .bib file before the LaTeX compilation.",
+    "type": "array",
+    "minItems": 1,
+    "maxItems": 20,
+    "uniqueItems": true,
+
+    "examples": [
+        [
+            {
+                "isDOI": false,
+                "notDOI": {
+                    "pubType": "Blogpost",
+                    "author": "Pepito Morales",
+                    "url": "https://example.com/blog/2017/06/15/blogpost-ejemplo",
+                    "pubDate": {
+                        "year": 2017,
+                        "month": 6
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "isDOI": true,
+                "DOI": "https:/doi.org/10.0000/example49534"
+            }
+        ]
+    ],
+
+    "items": {
+        "type": "object",
+        "properties": {
+            "isDOI": {
+                "type": "boolean",
+                "description": "Bool that defines if the data is DOI-based or custom.\n If it's DOI-based, then the fetching of the .bib info can be automated."
+            },
+            "DOI": {
+                "type": "string",
+                "format": "uri",
+                "description": "The DOI itself, to be put only if `isDOI` is set to true.\n Please adhere to DOI standards."
+            },
+            "notDOI": {
+                "type": "object",
+                "properties": {
+                    "pubType": {
+                        "type": "string",
+                        "description": "The type that will be set as entry type in the .bib file."
+                    },
+                    "author": {
+                        "type": "string",
+                        "description": "The author of the entry. Please adhere to .bib standards."
+                    },
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Link pointing to where the publication can be found."
+                    },
+                    "pubDate": {
+                        "type": "string",
+                        "format": "date",
+                        "description": "Date of publication. Please adhere to RFC stadards about dates."
+                    }
+                },
+                "description": "If the publication is not DOI-based, then a minimum of info is needed to generate the .bib entry.\nTo be put only if `isDOI` is set to false."
+            },
+            "required": ["isDOI"]
+        }
+    }
+}
