@@ -1,0 +1,22 @@
+{
+    "about": {
+        "name": "Acerca de mí",
+        "key": "_m+ABOUT"
+    },
+    "academia": {
+        "name": "Educación",
+        "key": "_m+ACADEMIA"
+    },
+    "work": {
+        "name": "Experiencia Laboral",
+        "key": "_m+WORK"
+    },
+    "awards": {
+        "name": "Premios y Galardones",
+        "key": "_m+AWARDS"
+    },
+    "publications": {
+        "name": "Publicaciones",
+        "key": "_m+PUBLICATIONS"
+    }
+}
