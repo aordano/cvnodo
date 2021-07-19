@@ -1,117 +1,117 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "sectionNames",
-    "description": "Validation for section names present in the CV.\nThe keys must not include characters eschewed by TeX, as [ ] { } & $ % \\ etc, and be unique.",
-    "type": "object",
-    "maxProperties": 5,
-    "minProperties": 5,
-    "readOnly": true,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "sectionNames",
+  "description": "Validation for section names present in the CV.\nThe keys must not include characters eschewed by TeX, as [ ] { } & $ % \\ etc, and be unique.",
+  "type": "object",
+  "maxProperties": 5,
+  "minProperties": 5,
+  "readOnly": true,
 
-    "examples": [
-        {
-            "about": {
-                "name": "Acerca de mí",
-                "key": "_m+ABOUT"
-            },
-            "academia": {
-                "name": "Educación Previa",
-                "key": "_m+ACADEMIA"
-            },
-            "work": {
-                "name": "Experiencia Laboral",
-                "key": "_m+WORK"
-            },
-            "awards": {
-                "name": "Premios y Galardones",
-                "key": "_m+AWARDS"
-            },
-            "publications": {
-                "name": "Documentos publicados",
-                "key": "_m+PUBLICATIONS"
-            }
-        }
-    ],
-
-    "properties": {
-        "publications": {
-            "type": "object",
-            "maxProperties": 2,
-            "minProperties": 2,
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "description": "Section name for the Publications section."
-                },
-                "key": {
-                    "type": "string",
-                    "description": "Key to indicate replacement position in the LaTeX template."
-                }
-            },
-            "description": "Data to process the Publications section."
-        },
-        "academia": {
-            "type": "object",
-            "maxProperties": 2,
-            "minProperties": 2,
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "description": "Section name for the Education section."
-                },
-                "key": {
-                    "type": "string",
-                    "description": "Key to indicate replacement position in the LaTeX template."
-                }
-            },
-            "description": "Data to process the Education section."
-        },
-        "work": {
-            "type": "object",
-            "maxProperties": 2,
-            "minProperties": 2,
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "description": "Section name for the Work Experience section."
-                },
-                "key": {
-                    "type": "string",
-                    "description": "Key to indicate replacement position in the LaTeX template."
-                }
-            },
-            "description": "Data to process the Work Experience section."
-        },
-        "awards": {
-            "type": "object",
-            "maxProperties": 2,
-            "minProperties": 2,
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "description": "Section name for the Awards section."
-                },
-                "key": {
-                    "type": "string",
-                    "description": "Key to indicate replacement position in the LaTeX template."
-                }
-            },
-            "description": "Data to process the Awards section."
-        },
-        "about": {
-            "type": "object",
-            "maxProperties": 2,
-            "minProperties": 2,
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "description": "Section name for the \"About me\" section."
-                },
-                "key": {
-                    "type": "string",
-                    "description": "Key to indicate replacement position in the LaTeX template."
-                }
-            },
-            "description": "Data to process the \"About me\" section."
-        }
+  "examples": [
+    {
+      "about": {
+        "name": "Acerca de mí",
+        "key": "_m+ABOUT"
+      },
+      "academia": {
+        "name": "Educación Previa",
+        "key": "_m+ACADEMIA"
+      },
+      "work": {
+        "name": "Experiencia Laboral",
+        "key": "_m+WORK"
+      },
+      "awards": {
+        "name": "Premios y Galardones",
+        "key": "_m+AWARDS"
+      },
+      "publications": {
+        "name": "Documentos publicados",
+        "key": "_m+PUBLICATIONS"
+      }
     }
+  ],
+
+  "properties": {
+    "publications": {
+      "type": "object",
+      "maxProperties": 2,
+      "minProperties": 2,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Section name for the Publications section."
+        },
+        "key": {
+          "type": "string",
+          "description": "Key to indicate replacement position in the LaTeX template."
+        }
+      },
+      "description": "Data to process the Publications section."
+    },
+    "academia": {
+      "type": "object",
+      "maxProperties": 2,
+      "minProperties": 2,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Section name for the Education section."
+        },
+        "key": {
+          "type": "string",
+          "description": "Key to indicate replacement position in the LaTeX template."
+        }
+      },
+      "description": "Data to process the Education section."
+    },
+    "work": {
+      "type": "object",
+      "maxProperties": 2,
+      "minProperties": 2,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Section name for the Work Experience section."
+        },
+        "key": {
+          "type": "string",
+          "description": "Key to indicate replacement position in the LaTeX template."
+        }
+      },
+      "description": "Data to process the Work Experience section."
+    },
+    "awards": {
+      "type": "object",
+      "maxProperties": 2,
+      "minProperties": 2,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Section name for the Awards section."
+        },
+        "key": {
+          "type": "string",
+          "description": "Key to indicate replacement position in the LaTeX template."
+        }
+      },
+      "description": "Data to process the Awards section."
+    },
+    "about": {
+      "type": "object",
+      "maxProperties": 2,
+      "minProperties": 2,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Section name for the \"About me\" section."
+        },
+        "key": {
+          "type": "string",
+          "description": "Key to indicate replacement position in the LaTeX template."
+        }
+      },
+      "description": "Data to process the \"About me\" section."
+    }
+  }
 }

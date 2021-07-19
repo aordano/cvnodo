@@ -1,12 +1,12 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "AboutModule",
-    "description": "Optative module to be included in the CV template.\nThis one is about the person.",
-    "type": "object",
-    "key": "_m+ABOUT",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AboutModule",
+  "description": "Optative module to be included in the CV template.\nThis one is about the person.",
+  "type": "object",
+  "key": "_m+ABOUT",
 
-    "about": {
-        "header": "\\section{Acerca de mí}\n",
-        "content": "NOT_PARSED_YET"
-    }
+  "about": {
+    "header": "\\section{Acerca de mí}\n",
+    "content": "NOT_PARSED_YET"
+  }
 }
