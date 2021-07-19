@@ -1,17 +1,17 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "AwardsModule",
-    "description": "Optative module to be included in the CV template.\nThis one is about awards.",
-    "type": "object",
-    "key": "_m+AWARDS",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AwardsModule",
+  "description": "Optative module to be included in the CV template.\nThis one is about awards.",
+  "type": "object",
+  "key": "_m+AWARDS",
 
-    "awards": {
-        "header": "\\section{Premios y galardones}\n",
-        "content": [
-            {
-                "name": "NOT_PARSED_YET",
-                "description": "NOT_PARSED_YET"
-            }
-        ]
-    }
+  "awards": {
+    "header": "\\section{Premios y galardones}\n",
+    "content": [
+      {
+        "name": "NOT_PARSED_YET",
+        "description": "NOT_PARSED_YET"
+      }
+    ]
+  }
 }
